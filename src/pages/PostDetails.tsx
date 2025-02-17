@@ -1,4 +1,3 @@
-// pages/PostDetails.tsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -24,7 +23,7 @@ const PostDetails: React.FC = () => {
 
   return (
     <div className=" mx-auto mt-8 px-4">
-      <Card className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-xl">
+      <Card className="md:p-6 bg-white dark:bg-gray-800 shadow-lg rounded-xl">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-gray-800 dark:text-white">
             {post.title}

@@ -20,7 +20,6 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            {/* Add more links as needed */}
           </ul>
           <ModeToggle />
         </div>

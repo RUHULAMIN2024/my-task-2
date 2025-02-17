@@ -38,11 +38,11 @@ const Home: React.FC = () => {
         <PostList posts={currentPosts} />
 
         {/* Pagination Controls */}
-        <div className="flex justify-center mt-6 space-x-4">
+        <div className="flex flex-wrap justify-center mt-6 gap-2 md:gap-4">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-200 ease-in-out disabled:bg-gray-300 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-400 dark:disabled:bg-gray-600 dark:text-white"
+            className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-200 ease-in-out disabled:bg-gray-300 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-400 dark:disabled:bg-gray-600 dark:text-white"
           >
             Prev
           </button>
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
             <button
               key={index}
               onClick={() => handlePageChange(index + 1)}
-              className={`px-6 py-3 rounded-lg shadow-md text-lg transition duration-200 ease-in-out ${
+              className={`px-4 py-2 md:px-6 md:py-3 rounded-lg shadow-md text-sm md:text-lg transition duration-200 ease-in-out ${
                 currentPage === index + 1
                   ? "bg-blue-600 text-white dark:bg-blue-500 dark:text-white"
                   : "bg-white text-gray-800 dark:bg-gray-800 dark:text-white hover:bg-blue-100 dark:hover:bg-blue-700"
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-200 ease-in-out disabled:bg-gray-300 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-400 dark:disabled:bg-gray-600 dark:text-white"
+            className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-200 ease-in-out disabled:bg-gray-300 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-400 dark:disabled:bg-gray-600 dark:text-white"
           >
             Next
           </button>
